@@ -16,7 +16,7 @@ This repository presents a comprehensive framework for **Sparse Hadamard Single-
   Script to generate sparse Hadamard speckle patterns based on the $H_{64}$ matrix. The patterns are saved as PNG images along with the corresponding row and column indices required for SHSI reconstruction, as outlined in **Algorithm 1**:
 
 <div style="text-align:center">
-  <img src="Images/Algorithm 1.png" alt="Algorithm 1" />
+  <img src="Images/Algorithm_1.png" alt="Algorithm 1" />
 </div>
 
 - `Natural_Hadamard_Transform.m`  
@@ -32,7 +32,7 @@ This repository presents a comprehensive framework for **Sparse Hadamard Single-
   - Computes and displays PSNR values for quantitative evaluation.
 
 <div style="text-align:center">
-  <img src="Images/Algorithm 2.png" alt="Algorithm 2" />
+  <img src="Images/Algorithm_2.png" alt="Algorithm 2" />
 </div>
 
 ## Usage Instructions
@@ -50,7 +50,7 @@ This repository presents a comprehensive framework for **Sparse Hadamard Single-
 (c–i) Reconstruction results obtained via ADMM-based CS, THSI, THSI combined with the CC, mode one using the $H_8$ basis, mode one using the $H_{256}$ basis, and mode two utilizing the $H_{256}$ basis combined with the CC at varying sampling rates.
 
 <div style="text-align:center">
-  <img src="Images/Experimental results.png" alt="Experimental Results" />
+  <img src="Images/Experimental_results.png" alt="Experimental Results" />
 </div>
 
 ## Contact
