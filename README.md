@@ -53,16 +53,8 @@ This repository presents a comprehensive framework for **Sparse Hadamard Single-
   <img src="Images/Experimental_results.png" alt="Experimental Results" />
 </div>
 
-## Contact
 
-For inquiries or collaboration opportunities, please contact:
-
-**Yuyuan Han**  
-Email: hanyuyuan6@gmail.com
-
----
-
-## Please cite
+## If useful please cite
 
 ```bibtex
 @article{han2025generalized,
