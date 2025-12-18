@@ -54,7 +54,7 @@ This repository presents a comprehensive framework for **Sparse Hadamard Single-
 </div>
 
 
-## If useful please cite
+## If useful please cite:
 
 ```bibtex
 @article{han2025generalized,
