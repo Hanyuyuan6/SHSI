@@ -2,6 +2,8 @@
 clear;
 clc;
 
+scriptFolder = fileparts(mfilename('fullpath'));
+
 dim = 6;                        % Hadamard dimension
 matrix_size = 2^dim;            % N
 
@@ -43,8 +45,8 @@ for iter = 1:matrix_size
     end
 end
 
-% Output directory (current working directory)
-output_folder = fullfile(pwd, 'data', 'Random_Discrete_Hadamard_Postive_and_Negetive_matrix_64_H');
+% Output directory (repository-local and independent of current working directory)
+output_folder = fullfile(scriptFolder, 'data', 'Random_Discrete_Hadamard_Postive_and_Negetive_matrix_64_H');
 if ~exist(output_folder, 'dir')
     mkdir(output_folder);
 end
