@@ -2,13 +2,25 @@ clc;
 close all;
 clearvars;
 
+scriptFolder = fileparts(mfilename('fullpath'));
+
 % Load row/col indices from current project folder
-load(fullfile(pwd, 'data', 'Random_Discrete_Hadamard_Postive_and_Negetive_matrix_64_H', 'row_col_indices.mat'), 'row_col_indices');
+load(fullfile(scriptFolder, 'data', 'Random_Discrete_Hadamard_Postive_and_Negetive_matrix_64_H', 'row_col_indices.mat'), 'row_col_indices');
 
 %% 1) Load and preprocess image
-obj = imread('Cameraman_256.bmp');
-samplingFactor = 4;
-obj = double(obj(1:samplingFactor:end, 1:samplingFactor:end));
+targetImagePath = getenv('SHSI_TARGET_IMAGE');
+if isempty(targetImagePath)
+    targetImagePath = which('cameraman.tif');
+end
+if isempty(targetImagePath) || ~isfile(targetImagePath)
+    error(['No target image found. Set SHSI_TARGET_IMAGE to an authorized ', ...
+           'local image, or install the MATLAB sample image cameraman.tif.']);
+end
+obj = imread(targetImagePath);
+if size(obj, 3) == 3
+    obj = rgb2gray(obj);
+end
+obj = im2double(imresize(obj, [64, 64]));
 obj = obj / max(obj(:));
 npixels = size(obj, 1);
 
@@ -23,7 +35,7 @@ figure(1);
 imagesc(Ht); colormap('gray'); title('Hadamard Matrix');
 
 %% 3) Load illumination patterns (PNG)
-folderPath = fullfile(pwd, 'data', 'Random_Discrete_Hadamard_Postive_and_Negetive_matrix_64_H');
+folderPath = fullfile(scriptFolder, 'data', 'Random_Discrete_Hadamard_Postive_and_Negetive_matrix_64_H');
 imageFiles = dir(fullfile(folderPath, '*.png'));
 numImages = length(imageFiles);
 

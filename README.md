@@ -37,6 +37,12 @@ This repository presents a comprehensive framework for **Sparse Hadamard Single-
 
 ## Usage Instructions
 
+Requirements: MATLAB with Image Processing Toolbox and Communications Toolbox. The demo uses MATLAB's local `cameraman.tif` sample by default instead of redistributing a copied bitmap. To use an authorized custom image, set the cross-platform environment variable `SHSI_TARGET_IMAGE` before running the script.
+
+```matlab
+setenv('SHSI_TARGET_IMAGE', fullfile(pwd, 'my_target.png'));
+```
+
 1. **Generate Hadamard Speckle Patterns**  
    Run `Generate_hadamard_matrix_random_64_H.m` to generate and save the positive and negative sparse Hadamard speckle patterns based on the $H_{64}$ basis. The patterns and corresponding reconstruction indices will be stored under `./data/Random_Discrete_Hadamard_Postive_and_Negetive_matrix_64_H/`.
 
@@ -67,3 +73,8 @@ This repository presents a comprehensive framework for **Sparse Hadamard Single-
   year={2025},
   publisher={Optica Publishing Group}
 }
+```
+
+## Licensing and asset provenance
+
+The MATLAB source code is released under the [MIT License](LICENSE). Generated illumination patterns under `data/` are local outputs and are not committed. Reference figures and sample-image handling have separate provenance notes in [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md); the MIT license must not be interpreted as relicensing third-party material.
