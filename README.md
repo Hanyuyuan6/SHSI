@@ -1,5 +1,7 @@
 # Demonstration of Sparse Hadamard Single-Pixel Imaging Using the $H_{64}$ Basis
 
+Published paper: [Generalized sparse Hadamard single-pixel Imaging](https://doi.org/10.1364/OE.576533) (Optics Express, 2025).
+
 ## Overview
 
 This repository presents a comprehensive framework for **Sparse Hadamard Single-Pixel Imaging (SHSI)** utilizing the $H_{64}$ Hadamard basis. The implementation encompasses:
